@@ -28,4 +28,6 @@
 
 ## 產生雷達圖
 
-執行 radar.py 可得雷達圖。
+執行 radar.py 可產生雷達圖
+
+![image](/data/pic/radar.png)
