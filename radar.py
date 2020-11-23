@@ -7,7 +7,8 @@ plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
 plt.style.use('ggplot')
 
-vectors_path = '../data/vectors.txt'
+vectors_path = 'data/vectors.txt'
+radar_path = 'data/pic/radar.png'
 
 brand_name = [u'吸金']
 key_words = [u'詐騙', u'投資', u'賠償', u'金額', u'犯罪']
@@ -18,7 +19,6 @@ def caculate_cosine_similarity():
     result = []
     for word in key_words:
         result.append(model.similarity(brand_name, word)[0])
-    print(result)
     return result
 
 
@@ -39,8 +39,8 @@ def draw_radar():
     ax.set_theta_zero_location('N')
     plt.legend(loc=1)
     ax.grid(True)
+    plt.savefig(radar_path)
     plt.show()
 
 
-# caculate_cosine_similarity()
 draw_radar()
